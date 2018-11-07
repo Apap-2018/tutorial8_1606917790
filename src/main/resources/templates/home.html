@@ -24,11 +24,11 @@
                         	<p th:text="${msg}"></p>
                         	<input type="hidden" name="username" th:value="${#httpServletRequest.userPrincipal.name}">
                             <label for="licenseNumber">Password Lama</label>
-                            <input type="password" name="password" class="form-control" />
+                            <input type="password" name="password" class="form-control" required />
                             <label for="licenseNumber">Password Baru</label>
-                            <input type="password" name="newPassword" class="form-control" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Harus mengandung 1 angka, 1 huruf, dan minimal 8 karakter" />
+                            <input type="password" name="newPassword" class="form-control" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Harus mengandung 1 angka, 1 huruf, dan minimal 8 karakter" required />
                             <label for="licenseNumber">Konfirmasi Password Baru</label>
-                            <input type="password" name="newPasswordConf" class="form-control" />
+                            <input type="password" name="newPasswordConf" class="form-control" required />
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>
@@ -46,11 +46,11 @@
 						<form th:action="@{/user/addUser}" method="post">
 							<div class="row form-group">
 								<label class="col-sd-4"> User Name</label>
-								<input class="col-sd-8 form-control input-sm" type="text" name="username">
+								<input class="col-sd-8 form-control input-sm" type="text" name="username" required>
 							</div>
 							<div class="row form-group">
 								<label class="col-sd-4"> Password: </label>
-								<input class="col-sd-8 form-control input-sm" type="password" name="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Harus mengandung 1 angka, 1 huruf, dan minimal 8 karakter">
+								<input class="col-sd-8 form-control input-sm" type="password" name="password" pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}" title="Harus mengandung 1 angka, 1 huruf, dan minimal 8 karakter" required>
 							</div>
 							<div class="row form-group">
 								<label class="col-sd-4"> Role: </label>

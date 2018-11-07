@@ -33,7 +33,7 @@ public class UserRoleController {
 				model.addAttribute("msg", "Password berhasil diubah.");
 			}
 			else {
-				model.addAttribute("msg", "Password baru tidak sama.");
+				model.addAttribute("msg", "Konfirmasi password tidak sesuai.");
 			}
 		}
 		else {
